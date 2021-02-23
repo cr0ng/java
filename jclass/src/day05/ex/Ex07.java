@@ -25,6 +25,25 @@ public class Ex07 {
 		}
 		//System.out.println("정확하게 걸리는 시간(초) : " + 7564/(0.54+1.07));
 		System.out.println("두 사람은 "+i+"초 후에 만납니다.");
+		
+		//선생님 코드
+		int sec=0;
+		
+		double up = 0;
+		double down = 0;
+		
+		while(true) {
+			++sec;
+			
+			up = 0.54 * sec;
+			down = 7564 -(1.07*sec);
+			
+			if(up > down) {
+				break;
+			}
+			
+		}
+		System.out.println(sec + " 초 후에 올라가는 사람의 위치는 "+ up + " 이고, \n내려가는 사람의 위치는 "+down+" 으로"+sec+"초 후에 만나게 된다.");
 	}
 
 }

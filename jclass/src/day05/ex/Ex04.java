@@ -25,8 +25,36 @@ public class Ex04 {
 		
 		System.out.print("다섯자리 숫자 입력 ");
 		String sno = in.nextLine();
+
+		int no = in.nextInt();
 		
+		int tmp = no;
+		int no1 = 0;
+		
+		for(int i = 0 ; i <5 ; i++) {
+			no1 = no1 * 10 + (tmp % 10);
+			tmp = tmp / 10;
+			
+			/*
+			 	i : 0	, no : 12345
+			 		==> no1 : 5
+			 			tmp : 1234
+			 			
+			 	i : 1	
+			 	 	==> no1 : 54
+			 	 		tmp : 123
+			 	 		
+			 	 ...
+			 		
+			 */
+		}
+		String result = (no == no1) ? "회무순입니다." : "회문수가 아닙니다.";
+		
+		System.out.println(no + "는 " + result);
+		
+		/*
 		String result = "회문수입니다.";
+		
 		for(int i = 0 ; i < 2; i++) {
 			char ch = sno.charAt(i);
 			char ch1 = sno.charAt(4-i);
@@ -35,13 +63,11 @@ public class Ex04 {
 				result = "회문수가아닙니다.";
 				break;
 			}
-		}
-			
+		}	
 		
 			System.out.println(sno + "는 " + result);
-		
-		
-		
+			
+		*/
 		
 	}
 
