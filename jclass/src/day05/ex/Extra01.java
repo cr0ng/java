@@ -24,10 +24,10 @@ extra 01 ]
 *****
 ---------------------------------------------------
 *****
-****
-***
-**
- *
+ ****
+  ***
+   **
+    *
 ---------------------------------------------------
     *
    ***
@@ -67,7 +67,7 @@ public class Extra01 {
 		*/
 		
 		//3¹ø
-		/*
+		
 		for(int i = 0 ; i < 5;i++) {
 			for(int j = 0  ; j < 5 ; j++) {
 				char ch = ' ';
@@ -78,15 +78,36 @@ public class Extra01 {
 			}
 			System.out.println();
 		}
-		*/
+		
 		
 		//4¹ø
-		for(int i = 0 ; i < 5 ; i ++) {
-			//for(int j = 0 ; j ; j++) {
-				
-			//}
+		/*
+		for(int i = 0 ; i < 5 ; i++ ) {
+			for(int j = 0 ; j < 5; j++ ) {
+				char ch = '*';
+				if(j < i) {
+					ch = ' ';
+				}
+				System.out.print(ch);
+			}
+			System.out.println();
 		}
-
+		*/
+		
+		//5¹ø
+		/*
+		for(int i = 0 ; i < 7 ; i++) {
+			for(int j = 0 ; j < (i*2)+1; j++) {
+				char ch = ' ';
+				if(j < (3-i) || j >) {
+					ch = '*';
+				}
+				System.out.print(ch);
+			
+		}
+			System.out.println();
+		}
+		*/
 	}
-
 }
+
