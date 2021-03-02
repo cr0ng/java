@@ -25,6 +25,7 @@ public class Ex05_01 {
 		 	
 		 */
 		
+		
 		for(int i = 0 ; i < friend[0].length ; i++) {
 			friend[i][0] =f1[i];
 			friend[i][1] =f2[i];
@@ -32,6 +33,7 @@ public class Ex05_01 {
 			friend[i][3] =f4[i];
 			friend[i][4] =f5[i];
 		}
+		
 		
 		for(String[] f : friend) {
 			System.out.println(Arrays.toString(f));

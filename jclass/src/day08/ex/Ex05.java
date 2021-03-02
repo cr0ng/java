@@ -24,7 +24,7 @@ public class Ex05 {
 		 	模备5	 :
 		 */
 		
-		
+		/*
 			for(int j = 0 ; j <friend[0].length;j++) {
 				friend[0][j] = f1[j];
 			}
@@ -52,9 +52,10 @@ public class Ex05 {
 				}
 				System.out.println();
 			}
-		
+		*/
 			
-			//急积丛内靛
+			//急积丛内靛1
+			/*
 			for(int i = 0 ; i < friend[0].length ; i++) {
 				friend[0][i] =f1[i];
 				friend[1][i] =f2[i];
@@ -62,7 +63,16 @@ public class Ex05 {
 				friend[3][i] =f4[i];
 				friend[4][i] =f5[i];
 			}
+			*/
 			
+			// 表篮 汗荤
+
+			System.arraycopy(f1,0,friend[0],0,f1.length);
+			System.arraycopy(f2,0,friend[1],0,f2.length);
+			System.arraycopy(f3,0,friend[2],0,f3.length);
+			System.arraycopy(f4,0,friend[3],0,f4.length);
+			System.arraycopy(f5,0,friend[4],0,f5.length);
+				
 			for(String[] f : friend) {
 				System.out.println(Arrays.toString(f));
 			}

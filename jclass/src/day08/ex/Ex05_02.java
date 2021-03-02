@@ -33,8 +33,9 @@ public class Ex05_02 {
 		 	模备4	 :
 		 	模备5	 :
 		 */
+	
 		
-		for(int i = 0 ; i < friend[0].length ; i++) {
+		for(int i = 0 ; i < friend.length ; i++) {
 			friend[i][0] =f1[i];
 			friend[i][1] =f2[i];
 			friend[i][2] =f3[i];
@@ -47,18 +48,47 @@ public class Ex05_02 {
 		}
 		
 		String[][] friend1 = new String[5][5];
-		
-		for(int i = 0 ; i < friend[0].length ; i++) {
+		/*
+		for(int i = 0 ; i < friend.length ; i++) {
 			friend1[0][i] =friend[i][0];
 			friend1[1][i] =friend[i][1];
 			friend1[2][i] =friend[i][2];
 			friend1[3][i] =friend[i][3];
 			friend1[4][i] =friend[i][4];
 		}
+		*/
+		//急积丛 内靛
+		for(int i = 0 ; i < friend.length ; i++) {
+			for(int j = 0 ; j < friend[i].length ; j++) {
+				friend1[i][j] = friend[j][i];
+			}
+		}
+		for(String[] f : friend1) {
+			System.out.println(Arrays.toString(f));
+		}
+		/*
+		System.arraycopy(f1,0,friend[0],0,f1.length);
+		System.arraycopy(f2,0,friend[1],0,f2.length);
+		System.arraycopy(f3,0,friend[2],0,f3.length);
+		System.arraycopy(f4,0,friend[3],0,f4.length);
+		System.arraycopy(f5,0,friend[4],0,f5.length);
+			
+		for(String[] f : friend) {
+			System.out.println(Arrays.toString(f));
+		}
+		
+		String[][] friend1 = new String[5][5];
+		
+		for(int i=0; i<5; ++i) {
+			for(int j=0; j<5; ++j) {
+			friend1[i][j] = friend[j][i];
+			}
+		}
 		
 		for(String[] f : friend1) {
 			System.out.println(Arrays.toString(f));
 		}
+		*/
 	}
 
 }
