@@ -1,14 +1,17 @@
 package day14;
 
-public class Test06_02 {
+import day14.sub.*;
+public class Test06_02 extends Sub02{
 
 	public Test06_02() {
-		// TODO Auto-generated constructor stub
+		Sub02 s2 = new Sub02();
+//		s3.no3 = 3000;
+		
+		super.no3 = 3000;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		new Test06_02();
 	}
 
 }

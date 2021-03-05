@@ -1,6 +1,6 @@
 package day14.sub;
 
-public class Sub01 {
+class Sub01 {
 
 	private int no = 10;
 	
@@ -15,7 +15,7 @@ public class Sub01 {
 	// 여기까지가 변수의 은닉화...
 	
 	public Sub01() {
-		System.out.println("*** 여기는 sub01 기본생성자");
+		System.out.println("*** 여기는 sub01 기본생성자 ***");
 	}
 
 }
