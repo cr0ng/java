@@ -66,9 +66,52 @@ public class Test01 {
 			Object obj = en.nextElement();
 			// 우리의 경우 키값이 모두 문자열이기 때문에 문자열로 강제 형변환 해주자.
 			String skey = (String) obj;
+			System.out.println("key : " + skey);
+			System.out.println("value : "+ tab.get(skey));
+		}
+		
+		System.out.println();
+		keyNval();
+		System.out.println();
+		keyNval2();
+	}
+	
+	// key와 value를 한 쌍으로 꺼내서 출력해주는 함수
+	public void keyNval() {
+		// 전역변수 tab에 기억된 데이터를 Map.Entry 타입으로 꺼내보자.
+		Set data = tab.entrySet();
+		
+		// 이 경우 Set 데이터 안에 tab에 담겨있던 키값과 데이터가 한쌍으로 Map.Entry 클래스에 저장되어있다.
+		// Set에는 데이터를 꺼내는 함수가 존재하지 않으므로
+		// Iterator나 ArrayList로 변환 후 한개씩 꺼내서 출력해야 함
+		
+		//Iterator로 꺼내는 방법
+		Iterator itor = data.iterator();
+		while(itor.hasNext()) {
+			Object o = itor.next();
+			Map.Entry ent = (Map.Entry) o;
+			/*
+			 * Map.Entry는 키값과 데이터를 변수로 가지는 VO 클래스이다
+			 * 따라서 ent 안에 기억된 키값과 벨류(데이터)를 함수를 호출해서 꺼내면 된다.
+			 */
+			System.out.println(ent.getKey() + " | " + ent.getValue());
 		}
 	}
 	
+	// entrySet()의 결과를 ArrayList로 변환해서 처리하는 함수
+	public void keyNval2() {
+		Set data = tab.entrySet();
+		
+		// Set을 ArrayList로 변환
+		ArrayList list = new ArrayList(data);
+		// 이 때 list에는 Map.Entry 타입의 데이터들이 들어있다.
+		for(int i = 0 ; i < list.size() ; i++) {
+			// 데이터 꺼내고
+			Map.Entry ent = (Map.Entry) list.get(i);
+			// 데이터 꺼내서 출력하고
+			System.out.println(ent.getKey() + " | " + ent.getValue());
+		}
+	}
 	
 	public static void main(String[] args) {
 		new Test01();
